@@ -1,0 +1,80 @@
+<main class="page">
+  <section>
+    <div class="section-header">
+      <div class="section-kicker">Paid Program</div>
+      <h1 class="section-title">The Alan Bergman Catering Business Academy.</h1>
+      <p class="section-subtitle">
+        If you’re serious about turning your love of cooking into a real catering business, this is where we talk pricing, menus, systems, and profit. This is a paid program, separate from the free cooking lessons.
+      </p>
+    </div>
+
+    <section class="highlight-strip">
+      <strong>Free vs Paid:</strong>
+      <span class="highlight-dot"></span>
+      <span>Recipes, cooking videos & prep tips = free.</span>
+      <span class="highlight-dot"></span>
+      <span>How to make money with catering = paid.</span>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">What We Cover Inside the Paid Academy</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3 class="feature-title">Pricing & Profit</h3>
+          <p class="feature-text">How to price your menus, control costs, and make sure every event is profitable.</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-title">Menus That Sell</h3>
+          <p class="feature-text">Design offers and packages that make it easy for clients to say “yes.”</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-title">Systems & Operations</h3>
+          <p class="feature-text">Checklists, timelines, and workflows so events run smoothly and repeatably.</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-title">Marketing & Bookings</h3>
+          <p class="feature-text">How to position, promote, and book clients without feeling salesy.</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-title">Client Experience</h3>
+          <p class="feature-text">Deliver events that lead to referrals, repeat bookings, and long-term relationships.</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-title">Tools & Templates</h3>
+          <p class="feature-text">Practical forms, proposals, and spreadsheets you can plug into your business.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Join the Waitlist</h2>
+        <p class="section-subtitle">
+          The business academy is a paid program with limited enrollment windows. Join the waitlist below to be the first to know when doors open and to receive early-bird pricing.
+        </p>
+      </div>
+
+      <div class="optin">
+        <div>
+          <div class="optin-title">Be the first to know when we open.</div>
+          <p class="optin-text">
+            Add your name to the waitlist for the Alan Bergman Catering Business Academy. This list is only for those interested in the paid business program.
+          </p>
+        </div>
+        <div>
+          <!-- Use a separate GHL form here with a different tag, e.g. "ABC Business Waitlist" -->
+          <form class="optin-form">
+            <input type="text" name="name" placeholder="First name" />
+            <input type="email" name="email" placeholder="Email address" required />
+            <button type="submit" class="btn btn-primary">Join the Business Academy Waitlist</button>
+          </form>
+          <div class="optin-note">
+            You’ll receive information specifically about the paid business academy. Cooking content remains on our free list.
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
