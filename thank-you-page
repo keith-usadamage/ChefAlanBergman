@@ -1,0 +1,53 @@
+<main class="page">
+  <section>
+    <div class="section-header">
+      <div class="section-kicker">You're In</div>
+      <h1 class="section-title">Thanks for joining the Alan Bergman Cooking Academy list.</h1>
+      <p class="section-subtitle">
+        Check your inbox for a welcome email and your first recipe. If you don’t see it in a few minutes, peek in your promotions or spam folder.
+      </p>
+    </div>
+
+    <section class="highlight-strip">
+      <strong>Next steps:</strong>
+      <span class="highlight-dot"></span>
+      <span>Watch a cooking video right now.</span>
+      <span class="highlight-dot"></span>
+      <span>Download a recipe and try it this week.</span>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Start Here</h2>
+      </div>
+      <div class="recipe-grid">
+        <article class="recipe-card">
+          <div class="recipe-label">Watch</div>
+          <h3 class="recipe-title">Go to the YouTube Channel</h3>
+          <p class="recipe-text">Find the latest videos and cook along with Chef Alan.</p>
+          <div class="recipe-actions">
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-primary btn-small">Open YouTube</a>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-label">Cook</div>
+          <h3 class="recipe-title">Download a Free Recipe</h3>
+          <p class="recipe-text">Pick a recipe from the library and plan your next meal.</p>
+          <div class="recipe-actions">
+            <a href="/recipes" class="btn btn-outline btn-small">View Recipes</a>
+          </div>
+        </article>
+
+        <article class="recipe-card">
+          <div class="recipe-label">Optional</div>
+          <h3 class="recipe-title">Interested in the business side?</h3>
+          <p class="recipe-text">If you want to turn cooking into income, join the waitlist for our paid business academy.</p>
+          <div class="recipe-actions">
+            <a href="/business-academy" class="btn btn-outline btn-small">Learn About the Business Academy</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </section>
+</main>
