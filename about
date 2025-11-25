@@ -1,0 +1,37 @@
+<main class="page">
+  <section>
+    <div class="section-header">
+      <div class="section-kicker">About</div>
+      <h1 class="section-title">Meet Chef Alan Bergman.</h1>
+      <p class="section-subtitle">
+        Real-world recipes and training from someone who’s cooked for real guests, real events, and real kitchens.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <p style="font-size:14px; margin-bottom:10px;">
+          Chef Alan Bergman has spent years in the kitchen, creating dishes that work not just once, but over and over again—for families, for guests, and for paying clients.
+        </p>
+        <p style="font-size:14px; margin-bottom:10px; color:var(--muted);">
+          The Alan Bergman Cooking Academy was created to help you cook better at home without needing a culinary degree. We focus on recipes, prep, flavor, and simple techniques that make a big difference.
+        </p>
+        <p style="font-size:14px; margin-bottom:10px; color:var(--muted);">
+          Our free content—emails, videos, and recipe downloads—is all about making you more confident in the kitchen. When you’re ready to explore catering as a business, we have a separate, paid academy dedicated to that journey.
+        </p>
+      </div>
+      <div>
+        <div class="pill">
+          <span class="pill-dot"></span>
+          Free cooking now. Paid business training later.
+        </div>
+        <ul style="margin-top:12px; font-size:13px; color:var(--muted); list-style: disc; padding-left:18px;">
+          <li>Free recipes & cooking tutorials on YouTube.</li>
+          <li>Email lessons focused on cooking and prep.</li>
+          <li>Optional paid program for starting a catering business.</li>
+        </ul>
+        <a href="/recipes" class="btn btn-primary btn-small" style="margin-top:12px;">Explore Free Recipes</a>
+      </div>
+    </div>
+  </section>
+</main>
