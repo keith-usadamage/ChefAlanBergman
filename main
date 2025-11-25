@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alan Bergman Cooking Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Free cooking and recipe training with Chef Alan Bergman. Get easy recipes, step-by-step cooking videos, and prep tips. Business training is available in our paid catering academy." />
+  <style>
+    :root {
+      --primary: #c0392b;
+      --primary-dark: #962d22;
+      --accent: #f1c40f;
+      --bg: #f9f7f4;
+      --text: #2c3e50;
+      --light: #ffffff;
+      --muted: #7f8c8d;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --shadow-soft: 0 14px 28px rgba(0,0,0,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* HEADER / NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(249,247,244,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .brand-text span:last-child {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      opacity: 0.8;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(192,57,43,0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(192,57,43,0.45);
+    }
+
+    .btn-outline {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .btn-outline:hover {
+      background: #fdfdfd;
+    }
+
+    .btn-small {
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 32px 0 16px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: var(--muted);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+    }
+
+    .hero-badge span {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-media {
+      background: linear-gradient(135deg, #fff, #fdf2e9);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-media-inner {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      position: relative;
+      padding-top: 56.25%;
+    }
+
+    .hero-media-inner iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .hero-media-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+    }
+
+    /* HIGHLIGHT STRIP */
+    .highlight-strip {
+      margin: 12px 0 24px;
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .highlight-strip strong {
+      color: var(--text);
+    }
+
+    .highlight-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    /* SECTIONS */
+    section {
+      margin: 32px 0;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 18px;
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* GRIDS */
+    .feature-grid,
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .feature-card,
+    .recipe-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 14px;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.03);
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-title,
+    .recipe-title {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .feature-text,
+    .recipe-text {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .recipe-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .recipe-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    /* ABOUT GRID */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      background: #fff;
+      border-radius: 999px;
+      font-size: 11px;
+      color: var(--muted);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    /* OPT-IN */
+    .optin {
+      background: linear-gradient(135deg, #c0392b, #8e44ad);
+      border-radius: var(--radius-lg);
+      padding: 20px 18px;
+      color: #fff;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .optin-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .optin-text {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .optin-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .optin-form input {
+      flex: 1 1 140px;
+      padding: 9px 10px;
+      border-radius: 999px;
+      border: none;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .optin-note {
+      font-size: 11px;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 32px;
+      padding: 18px 0 10px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero,
+      .optin,
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 20px;
+      }
+
+      .hero-media {
+        order: -1;
+      }
+
+      .feature-grid,
+      .recipe-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .feature-grid,
+      .recipe-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .page {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <div class="page">
+      <nav class="nav">
+        <div class="brand">
+          <div class="brand-logo">AB</div>
+          <div class="brand-text">
+            <span>Alan Bergman Cooking Academy</span>
+            <span>Cook Like a Pro at Home</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#recipes">Free Recipes</a>
+          <a href="/classes">Free Classes</a>
+          <a href="/business-academy">Business Academy</a>
+          <a href="/about">About</a>
+          <a href="#start-free" class="btn btn-primary">Join Free</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Free Online Cooking Training</div>
+        <h1 class="hero-title">Cook Like a Pro at Home With Chef Alan Bergman.</h1>
+        <p class="hero-subtitle">
+          Get free recipes, step-by-step cooking videos, and simple food-prep instructions used in real catering kitchens—made easy for home cooks and food lovers. Cooking is free. If you ever want to turn it into a business, that’s part of our paid academy.
+        </p>
+        <div class="hero-cta">
+          <a href="#start-free" class="btn btn-primary">Get Free Recipes & Videos</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-outline">Watch on YouTube</a>
+        </div>
+        <div class="hero-badge">
+          <span>Free</span> Recipes, cooking videos & prep tips. Business training is paid.
+        </div>
+        <p class="hero-note">No spam. Just delicious recipes and easy cooking tutorials.</p>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-media-inner">
+          <!-- Replace VIDEO_ID with your intro video ID -->
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Intro to Cooking with Chef Alan Bergman" allowfullscreen></iframe>
+        </div>
+        <div class="hero-media-tag">Watch: “Cook at Home With Chef Alan”</div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT STRIP -->
+    <section class="highlight-strip">
+      <strong>What you get for free:</strong>
+      <span class="highlight-dot"></span>
+      <span>Step-by-step cooking videos</span>
+      <span class="highlight-dot"></span>
+      <span>Printable recipes & prep guides</span>
+      <span class="highlight-dot"></span>
+      <span>No-cost cooking lessons from a working chef</span>
+    </section>
+
+    <!-- FEATURES -->
+    <section>
+      <div class="section-header">
+        <div class="section-kicker">Inside the Free Cooking Experience</div>
+        <h2 class="section-title">Learn Food Prep & Cooking the Easy Way.</h2>
+        <p class="section-subtitle">We focus on flavor, presentation, and timing so you can serve food you’re proud of—without needing professional training.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3 class="feature-title">Step-by-step cooking videos</h3>
+          <p class="feature-text">Cook along with Alan as he walks you through each dish from start to finish using simple, clear instructions.</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-title">Printable recipes</h3>
+          <p class="feature-text">Download easy-to-follow recipes with ingredients, measurements, and straightforward directions.</p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-title">Practical prep tips</h3>
+          <p class="feature-text">Learn how to prep ahead, store safely, and plate your food so it looks as good as it tastes.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FEATURED RECIPES -->
+    <section id="recipes">
+      <div class="section-header">
+        <div class="section-kicker">Free Recipe Library</div>
+        <h2 class="section-title">Download recipes from our YouTube videos.</h2>
+        <p class="section-subtitle">Each recipe includes a printable PDF and a full video walkthrough with Chef Alan.</p>
+      </div>
+
+      <div class="recipe-grid">
+        <!-- Recipe 1 -->
+        <article class="recipe-card">
+          <div class="recipe-label">Entrée</div>
+          <h3 class="recipe-title">Herb-Roasted Chicken for a Crowd</h3>
+          <p class="recipe-text">Juicy, flavorful roasted chicken that works beautifully for family dinners or small gatherings.</p>
+          <div class="recipe-actions">
+            <a href="#" class="btn btn-outline btn-small">Download Recipe PDF</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-primary btn-small">Watch on YouTube</a>
+          </div>
+        </article>
+
+        <!-- Recipe 2 -->
+        <article class="recipe-card">
+          <div class="recipe-label">Side</div>
+          <h3 class="recipe-title">Creamy Parmesan Mashed Potatoes</h3>
+          <p class="recipe-text">Rich, silky potatoes that stay smooth and delicious until you’re ready to serve.</p>
+          <div class="recipe-actions">
+            <a href="#" class="btn btn-outline btn-small">Download Recipe PDF</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-primary btn-small">Watch on YouTube</a>
+          </div>
+        </article>
+
+        <!-- Recipe 3 -->
+        <article class="recipe-card">
+          <div class="recipe-label">Appetizer</div>
+          <h3 class="recipe-title">Signature Crostini Trio</h3>
+          <p class="recipe-text">Three easy toppings that look impressive and are simple to prep ahead.</p>
+          <div class="recipe-actions">
+            <a href="#" class="btn btn-outline btn-small">Download Recipe PDF</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-primary btn-small">Watch on YouTube</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- YOUTUBE SECTION -->
+    <section id="youtube">
+      <div class="section-header">
+        <div class="section-kicker">YouTube Channel</div>
+        <h2 class="section-title">Cook along with Chef Alan every week.</h2>
+        <p class="section-subtitle">Step-by-step videos that help you nail timing, seasoning, and presentation at home.</p>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-media-inner">
+          <!-- Playlist or channel trailer -->
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Cooking with Chef Alan" allowfullscreen></iframe>
+        </div>
+        <div class="hero-media-tag">Subscribe for new cooking videos.</div>
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section id="about-preview">
+      <div class="about-grid">
+        <div>
+          <div class="section-header">
+            <div class="section-kicker">Meet Your Chef</div>
+            <h2 class="section-title">Chef Alan Bergman.</h2>
+          </div>
+          <p style="font-size:14px; margin-bottom:10px;">
+            Chef Alan Bergman has spent years cooking for real people, real events, and real kitchens. Now he’s bringing his favorite recipes and techniques online so you can cook with confidence at home.
+          </p>
+          <p style="font-size:14px; color:var(--muted); margin-bottom:10px;">
+            The free side of the Alan Bergman Cooking Academy is all about food—recipes, flavor, prep and presentation. If you ever decide you want to turn your love of cooking into a business, we have a separate, paid catering business academy opening soon.
+          </p>
+          <a href="/about" class="btn btn-outline btn-small">Learn more about Alan</a>
+        </div>
+        <div>
+          <div class="pill">
+            <span class="pill-dot"></span>
+            Free cooking lessons now. Paid business academy coming soon.
+          </div>
+          <ul style="margin-top:12px; font-size:13px; color:var(--muted); list-style: disc; padding-left:18px;">
+            <li>Free email recipes and cooking tips.</li>
+            <li>Video walkthroughs you can pause and replay.</li>
+            <li>Separate paid program for starting a catering business.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPT-IN / START FREE -->
+    <section id="start-free">
+      <div class="optin">
+        <div>
+          <div class="optin-title">Get free recipes, cooking videos & prep guides.</div>
+          <p class="optin-text">
+            Join the email list and we’ll send you our newest recipes, video walkthroughs, and home-cooking tips. All food—no business training in your inbox unless you ask for it.
+          </p>
+        </div>
+        <div>
+          <!-- Replace this with your GoHighLevel form if desired -->
+          <form class="optin-form">
+            <input type="text" name="name" placeholder="First name" />
+            <input type="email" name="email" placeholder="Email address" required />
+            <button type="submit" class="btn btn-primary">Join Free</button>
+          </form>
+          <div class="optin-note">
+            You’ll receive 1–3 emails per week with recipes and cooking content. Catering business training is part of our separate paid program.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="page footer-row">
+      <div>© <span id="year"></span> Alan Bergman Cooking Academy. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="/business-academy">Business Academy</a>
+      </div>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
