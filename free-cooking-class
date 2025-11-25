@@ -1,0 +1,55 @@
+<main class="page">
+  <section>
+    <div class="section-header">
+      <div class="section-kicker">Free Cooking Classes</div>
+      <h1 class="section-title">Cook Live With Chef Alan.</h1>
+      <p class="section-subtitle">
+        Join free online cooking sessions where Chef Alan walks you through recipes step by step. These classes focus on food—recipes, prep, flavor, and presentation.
+      </p>
+    </div>
+
+    <section class="highlight-strip">
+      <strong>Important:</strong>
+      <span class="highlight-dot"></span>
+      <span>Cooking classes are free.</span>
+      <span class="highlight-dot"></span>
+      <span>Catering business & “how to make money” training is only inside our paid academy.</span>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">
+          Add your email below and we’ll send you:
+        </p>
+      </div>
+      <ul style="font-size:13px; color:var(--muted); margin-left:18px; margin-bottom:16px; list-style: disc;">
+        <li>Class dates and times</li>
+        <li>Recipe PDFs so you can shop and prep</li>
+        <li>Replay links if you can’t make it live</li>
+      </ul>
+    </section>
+
+    <section id="class-optin">
+      <div class="optin">
+        <div>
+          <div class="optin-title">Get invited to our next free cooking class.</div>
+          <p class="optin-text">
+            We’ll send you class reminders, recipes, and replays. You’ll only receive cooking-related content from this list—business training is sent separately to paid students and business academy waitlist subscribers.
+          </p>
+        </div>
+        <div>
+          <!-- Replace this with your dedicated GHL "Class" form if you want different tags -->
+          <form class="optin-form">
+            <input type="text" name="name" placeholder="First name" />
+            <input type="email" name="email" placeholder="Email address" required />
+            <button type="submit" class="btn btn-primary">Notify Me About Classes</button>
+          </form>
+          <div class="optin-note">
+            We respect your inbox. You can unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
