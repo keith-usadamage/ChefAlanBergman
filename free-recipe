@@ -1,0 +1,70 @@
+<main class="page">
+  <section>
+    <div class="section-header">
+      <div class="section-kicker">Free Recipe Library</div>
+      <h1 class="section-title">Download Recipes From Our YouTube Channel.</h1>
+      <p class="section-subtitle">
+        Each recipe includes a printable PDF and a full video so you can cook along with Chef Alan at home.
+      </p>
+    </div>
+
+    <!-- Optional mini opt-in bar -->
+    <div class="highlight-strip">
+      <strong>Want new recipes sent to you?</strong>
+      <span class="highlight-dot"></span>
+      <span>Join the free email list for new dishes, videos, and prep tips.</span>
+      <a href="/#start-free" class="btn btn-primary btn-small">Join Free</a>
+    </div>
+
+    <div class="recipe-grid">
+      <!-- Duplicate and customize these for each recipe -->
+      <article class="recipe-card">
+        <div class="recipe-label">Entrée</div>
+        <h2 class="recipe-title">Herb-Roasted Chicken for a Crowd</h2>
+        <p class="recipe-text">
+          Juicy, herb-infused roasted chicken that’s simple enough for home cooks but impressive enough for company.
+        </p>
+        <ul style="font-size:12px; color:var(--muted); margin-left:16px; margin-bottom:8px;">
+          <li>Serves: 4–8 at home</li>
+          <li>Includes make-ahead and reheating tips</li>
+        </ul>
+        <div class="recipe-actions">
+          <a href="#" class="btn btn-outline btn-small">Download Recipe PDF</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-primary btn-small">Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="recipe-card">
+        <div class="recipe-label">Side</div>
+        <h2 class="recipe-title">Creamy Parmesan Mashed Potatoes</h2>
+        <p class="recipe-text">
+          Smooth, rich, and full of flavor—easy enough for weeknights and special enough for holidays.
+        </p>
+        <ul style="font-size:12px; color:var(--muted); margin-left:16px; margin-bottom:8px;">
+          <li>Serves: 4–6</li>
+          <li>Includes make-ahead and holding instructions</li>
+        </ul>
+        <div class="recipe-actions">
+          <a href="#" class="btn btn-outline btn-small">Download Recipe PDF</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-primary btn-small">Watch on YouTube</a>
+        </div>
+      </article>
+
+      <article class="recipe-card">
+        <div class="recipe-label">Appetizer</div>
+        <h2 class="recipe-title">Signature Crostini Trio</h2>
+        <p class="recipe-text">
+          Three toppings you can prep in advance and assemble quickly right before guests arrive.
+        </p>
+        <ul style="font-size:12px; color:var(--muted); margin-left:16px; margin-bottom:8px;">
+          <li>Three flavor options</li>
+          <li>Includes plating and garnish suggestions</li>
+        </ul>
+        <div class="recipe-actions">
+          <a href="#" class="btn btn-outline btn-small">Download Recipe PDF</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-primary btn-small">Watch on YouTube</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
